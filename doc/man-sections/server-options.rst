@@ -524,6 +524,7 @@ fast hardware. SSL/TLS authentication must be used in this mode.
 
      if dev tap OR (dev tun AND topology == subnet):
        ifconfig 10.8.0.1 255.255.255.0
+       ifconfig-push-constraint 10.8.0.0 255.255.255.0
        if !nopool:
          ifconfig-pool 10.8.0.2 10.8.0.253 255.255.255.0
        push "route-gateway 10.8.0.1"
